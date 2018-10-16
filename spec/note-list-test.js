@@ -1,18 +1,13 @@
-(function(exports) {
-
-  function testShowNote() {
+describe('Note list', function() {
+  it('shows list of notes', function() {
     var noteList = new NoteList();
-    noteList.createAndStoreNote('Hello')
-    assert.isTrue(noteList.showNote() === noteList.list)
-  };
+    assert.isTrue(noteList.showNotes() === noteList.list)
+    assert.isArray(noteList.showNotes())
+  })
 
-  testShowNote();
-
-  function testCreateNote() {
+  it('create and store a new note', function() {
     var noteList = new NoteList();
-    noteList.createAndStoreNote('Hello')
+    noteList.storeNewNote('Hello')
     assert.isTrue(noteList.list.includes(note))
-  }
-
-  testCreateNote()
-})(this);
+  })
+})

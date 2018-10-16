@@ -4,12 +4,12 @@
     this.list = [];
   }
 
-  NoteList.prototype.createAndStoreNote = function (value) {
+  NoteList.prototype.storeNewNote = function (value) {
     note = new Note(value)
     this.list.push(note)
   }
 
-    NoteList.prototype.showNote = function () {
+    NoteList.prototype.showNotes = function () {
       return this.list
     };
 

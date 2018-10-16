@@ -1,9 +1,7 @@
-(function(exports) {
-
-  function testReturnText() {
+describe('Note', function() {
+  it('returns test', function() {
     var note = new Note('text');
     assert.isTrue(note.returnText() === 'text');
-  };
-
-  testReturnText();
-})(this);
+    assert.isString(note.returnText());
+  })
+})
