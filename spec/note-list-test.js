@@ -7,7 +7,7 @@ describe('Note list', function() {
 
   it('create and store a new note', function() {
     var noteList = new NoteList();
-    noteList.storeNewNote('Hello')
-    assert.isTrue(noteList.list.includes(note))
+    noteList.create('Hello')
+    assert.isTrue(noteList.list[0].text === 'Hello')
   })
 })
