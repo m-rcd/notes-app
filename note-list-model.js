@@ -3,6 +3,7 @@
 
   function NoteList() {
     this.list = [];
+    this.idCounter = 0
   }
 
   NoteList.prototype.showNotes = function () {
@@ -10,7 +11,8 @@
   };
 
   NoteList.prototype.create = function (value) {
-    var note = new Note(value)
+    var note = new Note(value, this.idCounter)
+    this.idCounter += 1
     this.list.push(note)
   }
 

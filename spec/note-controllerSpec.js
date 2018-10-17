@@ -6,22 +6,30 @@ describe('Note controller', function() {
 
   function MockListView() {}
   MockListView.prototype.listNotes = function() {
-    return '<ul><li><div>Favourite Harry potter character: Hedwig</div></li></ul>'
+    return '<ul><li><div><a href="note/0">Favourite Harry pott</a></div></li></ul>'
     }
 
+  noteController = new NoteController(list, MockListView);
 
   it('can be instantiated', function() {
-    noteController = new NoteController(list, MockListView);
     assert.isTrue(noteController instanceof NoteController)
   });
 
 
   it('can insert HTML', function() {
-    noteController = new NoteController();
     window.onload = function() {
       noteController.insertHtml()
       var app = document.getElementById('app')
-      assert.isTrue(app.innerHTML ===  '<ul><li><div>Favourite Harry pott</div></li></ul>')
+      assert.isTrue(app.innerHTML ===  '<ul><li><div><a href="note/0">Favourite Harry pott</a></div></li></ul>')
     }
   })
+
+  // it('shows note on a new page', function() {
+  //   window.onload = function() {
+  //     noteController.insertHtml()
+  //     document.getElementById('app').click();
+  //     var noteDiv = document.getElementById('viewnote')
+  //     assert.isTrue(noteDiv.innerHTML === 'Favourite Harry potter character: Hedwig')
+  //   }
+  // })
 })
