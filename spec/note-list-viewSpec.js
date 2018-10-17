@@ -1,7 +1,8 @@
 describe('note list view', function() {
-  it('list notes', function() {
+  it('returns a string of HTML', function() {
     var noteList = new NoteList();
+    noteList.create('BOOO')
     var noteListView = new NoteListView(noteList)
-    expect(listNotes()).toBe()
+    assert.isTrue(noteListView.listNotes() === '<ul><li><div>BOOO</div></li></ul>')
   })
 })
