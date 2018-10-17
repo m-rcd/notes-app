@@ -21,7 +21,7 @@ describe('Note controller', function() {
     window.onload = function() {
       noteController.insertHtml()
       var app = document.getElementById('app')
-      assert.isTrue(app.innerHTML ===  '<ul><li><div>Favourite Harry potter character: Hedwig</div></li></ul>')
+      assert.isTrue(app.innerHTML ===  '<ul><li><div>Favourite Harry pott</div></li></ul>')
     }
   })
 })
