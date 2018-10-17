@@ -8,7 +8,7 @@ describe('Note controller', function() {
   MockListView.prototype.listNotes = function() {
     return '<ul><li><div>Favourite Harry potter character: Hedwig</div></li></ul>'
     }
-  
+
 
   it('can be instantiated', function() {
     noteController = new NoteController(list, MockListView);
