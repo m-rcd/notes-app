@@ -12,7 +12,7 @@
 
   NoteList.prototype.create = function (value) {
     var note = new Note(value, this.idCounter)
-    this.idCounter += 1
+    this.idCounter++
     this.list.push(note)
   }
 

@@ -5,7 +5,7 @@
 
   SingleNoteView.prototype.noteString = function() {
     var text = this.note.returnText()
-    return '<div>' + text + '</div>'
+    return `<div>${text}</div>`
   }
 
   exports.SingleNoteView = SingleNoteView;

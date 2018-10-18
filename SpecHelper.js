@@ -11,26 +11,26 @@ const matchers = (exp) => ({
       console.log('%c Test passed!', "color: green")
       return true
     } else {
-      console.log('Fail!')
+      throw new Error('Fail!')
       return false
     }
   },
 
-  toContain(element) => {
+  toContain: (element) => {
     if (exp.includes(element)) {
-      console.log('%c Test passed! '+ exp + 'includes ' + element + ' !', "color: green")
+      console.log(`%c Test passed! ${exp} includes ${element}!`, "color: green")
       return true
     } else {
-      console.log('Fail' + exp + 'does not include ' + element + ' !')
+      throw new Error(`Fail ${exp} does not include ${element}!`)
       return false
     }
   },
 
-  notToContain(element) => {
+  notToContain: (element) => {
     if (exp.includes(element)) {
-      console.log('Fail' + exp + 'includes ' + element + ' !')
+      throw new Error(`Fail ${exp} includes ${element}!`)
     } else {
-      console.log('%c Test passed! '+ exp + 'does not include ' + element + ' !', "color: green")
+      console.log(`%c Test passed! ${exp} does not include ${element}!`, "color: green")
     }
   }
 })

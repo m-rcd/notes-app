@@ -10,4 +10,5 @@ describe('Note', function() {
     assert.isTrue(note.returnText() === 'text');
     assert.isString(note.returnText());
   })
+
 })

@@ -7,7 +7,7 @@ describe('Single note view', function() {
 
   var singleNoteView = new SingleNoteView(mockNote);
 
-  it('can instatiate single note view object', function() {
+  it('can instantiate single note view object', function() {
     assert.isTrue(singleNoteView instanceof SingleNoteView)
   });
 

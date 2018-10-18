@@ -24,7 +24,7 @@ describe('Note controller', function() {
     }
   })
 
-  // it('shows note on a new page', function() {
+  // it('shows the whole note', function() {
   //   window.onload = function() {
   //     noteController.insertHtml()
   //     document.getElementById('app').click();
