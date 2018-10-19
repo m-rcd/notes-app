@@ -14,6 +14,7 @@ describe('Note list', function() {
   it('create and store a new note with an ID', function() {
     noteList.create('Hello')
     assert.isTrue(noteList.list[0].text === 'Hello')
+    assert.isTrue(noteList.list[0].id === 0)
     assert.isTrue(noteList.idCounter === 1)
   })
 })

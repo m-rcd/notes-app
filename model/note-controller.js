@@ -27,7 +27,7 @@
   };
 
   NoteController.prototype.getNoteIdFromUrl = function(location) {
-    return location.hash.split("#note/")[1];
+    return location.hash.split("#note/")[0];
   }
 
   NoteController.prototype.showNote = function(note) {
@@ -37,5 +37,22 @@
       .innerHTML = singleNoteView.noteString() ;
   }
 
+  NoteController.prototype.submitNote = function() {
+    document.list = this.list
+
+    document
+    .getElementById('submit')
+    .addEventListener('click', function(clickEvent) {
+      clickEvent.preventDefault()
+      var text = document.getElementById('msg').value
+      console.log(text)
+      document.list.create(text)
+    })
+  }
+
+
   exports.NoteController = NoteController
 })(this);
+
+var noteController = new NoteController()
+noteController.submitNote()
