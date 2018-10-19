@@ -18,8 +18,12 @@ describe('note list view', function() {
   noteList.create(note)
   var noteListView = new NoteListView(noteList)
 
+  it('can be instantiated with a notelist', function() {
+    assert.isTrue(noteListView instanceof NoteListView)
+  })
+
   it('returns the first 20 character of string of HTML', function() {
-    assert.isTrue(noteListView.listNotes() === '<ul><li><div><a href="note/0">Hello my name is Cri</a></div></li></ul>')
+    assert.isTrue(noteListView.listNotes() === '<ul><li><div><a href="#note/0">Hello my name is Cri</a></div></li></ul>')
   })
 
   it('url contains id', function() {

@@ -1,6 +1,6 @@
 'use strict';
-(function(exports){
 
+(function(exports){
   function NoteList() {
     this.list = [];
     this.idCounter = 0

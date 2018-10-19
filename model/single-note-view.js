@@ -1,3 +1,5 @@
+'use strict';
+
 (function(exports) {
   function SingleNoteView(note) {
     this.note = note;

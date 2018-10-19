@@ -6,7 +6,7 @@ describe('Note', function() {
     assert.isTrue(note.id === 1)
   })
 
-  it('returns test', function() {
+  it('returns text', function() {
     assert.isTrue(note.returnText() === 'text');
     assert.isString(note.returnText());
   })
